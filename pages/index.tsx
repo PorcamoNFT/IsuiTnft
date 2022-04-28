@@ -28,18 +28,15 @@ function Homepage() {
   const { toggleColorMode} = useColorMode ();
   return ( 
 
-        <Grid
-          h={{base: 'auto', md: '100vh'}}
-          w="full"
-          d={{ base: 'column-reverse', md: 'row'}}>
-          <Flex h={{base: 'auto', md: '100vh'}} py={[0, 10, 20]} direction={{ base: 'column-reverse', md: 'row'}}> 
-          <Container>
-          <Image boxSize='sm' src='/IsuiT NFT logo.png' alt='IsuiT Logo' alignContent="center"/>
-        
+       
+          <Flex h={{base: 'auto', md: '50vh'}} py={[0, 10, 20]} direction={{ base: 'column-reverse', md: 'row'}}> 
+  
+         <Container>
+          <Image boxSize='sm' src='/IsuiT NFT logo.png' alt='IsuiT Logo' verticalAlign="center"/>
           </Container>
           <VStack
             w={'full'}
-            justify={'center'}
+            justify={'flex-end'}
             px={useBreakpointValue({ base: 4, md: 8 })}
             >
             <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
@@ -53,6 +50,7 @@ function Homepage() {
                Full-Service NFT - <br></br>
               From start to finish  
               </Text>
+            
           
          
                 <Button
@@ -62,13 +60,15 @@ function Homepage() {
                   _hover={{ bg: 'black' }}>
                  Get Started Today
                 </Button>
-                <Divider />
+             
        
             </Stack>
           </VStack>
-          </Flex>
-<Divider />
-        </Grid> 
+        
+</Flex>
+
+
+
 
 
 

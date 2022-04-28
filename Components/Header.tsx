@@ -20,7 +20,7 @@ const Header = (props) => {
     <Flex
       as="nav"
       align="center"
-      justify="space-between"
+      justify="space-around"
       wrap="wrap"
       padding={2}
       bg="Black"
@@ -28,7 +28,7 @@ const Header = (props) => {
       {...props}
     >
       <Flex align="center" mr={5}>
-        <Heading as="h1" size="lg" letterSpacing={"tighter"}>
+        <Heading as="h1" size="xl" letterSpacing={"tighter"}>
         <Link href="/">
          <a> IsuiT NFT </a>
        </Link>
