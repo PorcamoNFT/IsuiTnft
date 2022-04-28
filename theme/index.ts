@@ -24,6 +24,7 @@ const theme = extendTheme ({
 fonts: {
     Headers: 'Montserrat',
     p: 'Montserrat',
+    Text: 'Montserrat',
 },
 
 
