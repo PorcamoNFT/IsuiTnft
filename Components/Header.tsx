@@ -10,14 +10,8 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import theme from "../theme";
+import Link from "next/link";
 
-
-// Note: This code could be better,
-// so I'd recommend you to understand how I solved and you could write yours better :)
-// Good luck! 🍀
-
-// Update: Check these awesome headers from Choc UI 👇
-// https://choc-ui.tech/docs/elements/headers
 const Header = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const handleToggle = () => (isOpen ? onClose() : onOpen());
@@ -28,14 +22,16 @@ const Header = (props) => {
       align="center"
       justify="space-between"
       wrap="wrap"
-      padding={6}
-      bg="brand.600"
+      padding={2}
+      bg="Black"
       color="white"
       {...props}
     >
       <Flex align="center" mr={5}>
         <Heading as="h1" size="lg" letterSpacing={"tighter"}>
-          IsuiT NFT
+        <Link href="/">
+         <a> IsuiT NFT </a>
+       </Link>
         </Heading>
       </Flex>
 
@@ -51,7 +47,9 @@ const Header = (props) => {
         flexGrow={1}
         mt={{ base: 4, md: 0 }}
       >
-        <Text>Home</Text>
+       <Link href="/cart">
+         <a> Cart </a>
+       </Link>
         <Text>Categories</Text>
         <Text>Blog</Text>
       </Stack>
