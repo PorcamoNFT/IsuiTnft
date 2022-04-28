@@ -17,7 +17,10 @@ import { FormControl,
   useColorMode,
   Stack,
   useBreakpointValue,
+  Divider,
+  Grid,
   } from '@chakra-ui/react'
+  import image from 'public/IsuiT NFT logo.png'
   import { PhoneIcon, AddIcon, MoonIcon } from '@chakra-ui/icons'
 import Header from '../Components/Header';
 
@@ -25,15 +28,14 @@ function Homepage() {
   const { toggleColorMode} = useColorMode ();
   return ( 
 
-        <Flex
+        <Grid
+          h={{base: 'auto', md: '100vh'}}
           w="full"
-          h={{base: 'auto', sm: '100vh'}}
-          backgroundSize={'cover'}
-          backgroundPosition={'center center'}>
+          d={{ base: 'column-reverse', md: 'row'}}>
+          <Flex h={{base: 'auto', md: '100vh'}} py={[0, 10, 20]} direction={{ base: 'column-reverse', md: 'row'}}> 
           <Container>
-
-   
-
+          <Image boxSize='sm' src='/IsuiT NFT logo.png' alt='IsuiT Logo' alignContent="center"/>
+        
           </Container>
           <VStack
             w={'full'}
@@ -41,6 +43,7 @@ function Homepage() {
             px={useBreakpointValue({ base: 4, md: 8 })}
             >
             <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
+              
               <Text
                 color={'black'}
                 fontWeight={700}
@@ -50,28 +53,27 @@ function Homepage() {
                Full-Service NFT - <br></br>
               From start to finish  
               </Text>
-              <Stack direction={'row'}>
+          
+         
                 <Button
                   bg={'brand.500'}
                   rounded={'full'}
                   color={'white'}
                   _hover={{ bg: 'black' }}>
-                  Show me more
+                 Get Started Today
                 </Button>
-                <Button
-                  bg={'brand.500'}
-                  rounded={'full'}
-                  color={'white'}
-                  _hover={{ bg: 'black' }}>
-                  Show me more
-                </Button>
-              </Stack>
+                <Divider />
+       
             </Stack>
           </VStack>
+          </Flex>
+<Divider />
+        </Grid> 
 
-          
-        </Flex> 
-      
+
+
+
+   
         
     
       );

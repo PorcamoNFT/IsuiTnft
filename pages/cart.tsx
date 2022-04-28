@@ -27,7 +27,7 @@ const Cart = () => {
     return ( 
 
 <Container maxWidth="container.xl" padding={0}> 
-<Flex h={{base: 'auto', md: '100vh'}} py={[0, 10, 20]} direction={{ base: 'column-reverse', md: 'row'}}>
+<Flex h={{base: 'auto', md: '100vh'}} py={[0, 0, 0]} direction={{ base: 'column-reverse', md: 'row'}}>
     <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
     <VStack spacing={3} alignItems="flex-start">
     <Heading size="2xl"> Your Details </Heading>
